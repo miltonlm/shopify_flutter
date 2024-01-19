@@ -51,6 +51,12 @@ query($id : ID!, $cursor : String, $sortKey: ProductCollectionSortKeys){
               }
             }
             onlineStoreUrl
+            metafields(first: 250) {
+              id
+              key
+              value
+              type            
+            }
             productType
             publishedAt
             tags

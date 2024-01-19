@@ -248,6 +248,7 @@ class ShopifyStore with ShopifyError {
     do {
       _options = WatchQueryOptions(
           document: gql(getAllCollectionsOptimizedQuery),
+          fetchPolicy: FetchPolicy.noCache,
           variables: {
             'cursor': cursor,
             'sortKey': sortKeyCollection.parseToString(),

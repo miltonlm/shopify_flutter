@@ -68,11 +68,12 @@ query($ids : [ID!]!){
         }
       }
       onlineStoreUrl
-      metafields(first: 250) {
-        id
-        key
-        value
-        type            
+      metafields(identifiers: {namespace: "custom", key: "estrellas"}) {
+          id
+          namespace
+          key
+          value
+          description
       }
       productType
       publishedAt

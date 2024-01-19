@@ -280,12 +280,17 @@ class Product with _$Product {
 
   static List<Metafield> _getMetafieldList(Map<String, dynamic> json) {
     try {
+      log("PRINTING JSON1");
+      log(json.toString());
+
       if (json.containsKey('node')) {
         if (json['node']?['metafields'] == null) return [];
-        return ((json['node']?['metafields']?['edges'] ?? []) as List)
+        return ((json['node']?['metafields'] ?? []) as List)
             .map((v) => Metafield.fromGraphJson(v ?? const {}))
             .toList();
       } else {
+        log("PRINTING JSON");
+        log(json.toString());
         if (json['metafields'] == null) return [];
         return ((json['metafields'] ?? []) as List).map((v) {
           final jsonMetafield = v is Metafield ? v.toJson() : v;

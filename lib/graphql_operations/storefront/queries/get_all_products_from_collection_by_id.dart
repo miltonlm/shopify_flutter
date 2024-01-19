@@ -9,6 +9,12 @@ query($id : ID!, $cursor : String, $sortKey: ProductCollectionSortKeys){
       handle
       title
       updatedAt
+      metafields {
+        id
+        key
+        value
+        type            
+      }
       image {
         altText
         id
@@ -51,12 +57,6 @@ query($id : ID!, $cursor : String, $sortKey: ProductCollectionSortKeys){
               }
             }
             onlineStoreUrl
-            metafields {
-              id
-              key
-              value
-              type            
-            }
             productType
             publishedAt
             tags

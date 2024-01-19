@@ -27,6 +27,12 @@ query($ids : [ID!]!){
       createdAt
       description
       descriptionHtml
+      metafields {
+        id
+        key
+        value
+        type            
+      }
       images(first: 250) {
           edges {
             node {
@@ -68,12 +74,6 @@ query($ids : [ID!]!){
         }
       }
       onlineStoreUrl
-      metafields {
-        id
-        key
-        value
-        type            
-      }
       productType
       publishedAt
       tags

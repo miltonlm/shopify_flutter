@@ -51,14 +51,10 @@ query($id : ID!, $cursor : String, $sortKey: ProductCollectionSortKeys){
               }
             }
             onlineStoreUrl
-            metafields(first: 250) {
-                edges {
-                    node {
-                        namespace
-                        key
-                        value
-                    }
-                }
+            metafields(identifiers: {namespace: "custom.estrellas", key: "*"}) {
+              namespace
+              key
+              value
             }
             productType
             publishedAt

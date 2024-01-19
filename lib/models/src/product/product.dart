@@ -280,6 +280,9 @@ class Product with _$Product {
 
   static List<Metafield> _getMetafieldList(Map<String, dynamic> json) {
     try {
+      log("PRINTING JSON1");
+      log(json.toString());
+
       if (json.containsKey('node')) {
         if (json['node']?['metafields'] == null) return [];
         return ((json['node']?['metafields']?['edges'] ?? []) as List)

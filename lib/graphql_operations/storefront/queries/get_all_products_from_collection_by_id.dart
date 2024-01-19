@@ -51,7 +51,7 @@ query($id : ID!, $cursor : String, $sortKey: ProductCollectionSortKeys){
               }
             }
             onlineStoreUrl
-            metafields(first: 250) {
+            metafields {
               id
               key
               value

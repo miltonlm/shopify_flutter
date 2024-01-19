@@ -68,7 +68,7 @@ query($ids : [ID!]!){
         }
       }
       onlineStoreUrl
-      metafields(first: 250) {
+      metafields {
         id
         key
         value

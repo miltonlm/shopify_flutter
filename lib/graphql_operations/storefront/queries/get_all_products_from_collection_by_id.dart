@@ -51,10 +51,12 @@ query($id : ID!, $cursor : String, $sortKey: ProductCollectionSortKeys){
               }
             }
             onlineStoreUrl
-            metafields(identifiers: {namespace: "custom.estrellas", key: "*"}) {
-              namespace
-              key
-              value
+            metafields(identifiers: {namespace: "custom", key: "estrellas"}) {
+                id
+                namespace
+                key
+                value
+                description
             }
             productType
             publishedAt

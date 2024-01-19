@@ -286,8 +286,8 @@ class Product with _$Product {
             .map((v) => Metafield.fromGraphJson(v ?? const {}))
             .toList();
       } else {
-        print("PRINTING JSON");
-        print(json);
+        log("PRINTING JSON");
+        log(json.toString());
         if (json['metafields'] == null) return [];
         return ((json['metafields'] ?? []) as List).map((v) {
           final jsonMetafield = v is Metafield ? v.toJson() : v;

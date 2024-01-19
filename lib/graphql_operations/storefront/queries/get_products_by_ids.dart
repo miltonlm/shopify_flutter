@@ -74,6 +74,15 @@ query($ids : [ID!]!){
         }
       }
       onlineStoreUrl
+      metafields(first: 250) {
+          edges {
+              node {
+                  namespace
+                  key
+                  value
+              }
+          }
+      }
       productType
       publishedAt
       tags

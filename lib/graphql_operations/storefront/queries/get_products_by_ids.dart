@@ -27,12 +27,6 @@ query($ids : [ID!]!){
       createdAt
       description
       descriptionHtml
-      metafields {
-        id
-        key
-        value
-        type            
-      }
       images(first: 250) {
           edges {
             node {
